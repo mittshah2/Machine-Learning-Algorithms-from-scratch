@@ -41,7 +41,7 @@ for i in range(epochs):
     temp = np.zeros(theta.shape)
 
     for j in range(n):
-        temp[j]=theta[j]-(lr/m)*np.sum((np.dot(y_pred-y,x_train)))
+        temp[j]=theta[j]-(lr/m)*np.sum((np.dot(y_pred-y,x_train[:,j])))
     theta[:]=temp[:]
 
 
